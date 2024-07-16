@@ -1,13 +1,13 @@
 {% set name = "buildkite-test-collector" %}
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/buildkite-test-collector-{{ version }}.tar.gz
-  sha256: 555b5b7ef771e4ced23e004899c18f837faaa3b6167f3d129b871f8c2419abdb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: aa464ed71fefc6afd39016e6efe19630fdcf6e18c17a0bf8b18b174d005131b9
 
 build:
   noarch: python
